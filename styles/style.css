@@ -27,3 +27,11 @@ body {
     box-shadow: rgba(168, 168, 168, 0.25);
     border-radius: 35px;
 }
+
+.adiciona-atividade {
+    display: flex;
+}
+
+.horarios, .horario-semana {
+    display: flex;
+}
