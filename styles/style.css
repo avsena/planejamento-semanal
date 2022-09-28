@@ -1,0 +1,29 @@
+:root {
+    --segunda-feira: #FFA246;
+    --terca-feira: #35E185;
+    --quarta-feira: #6688FF;
+    --quinta-feira: #B266FF;
+    --sexta-feira: #66D1FF;
+    --sabado: #FF66D4;
+    --domingo: #FF6666;
+    --excluir: #DA2B40;
+    --verde: #2CBE82;
+    --background: #E5E5E5;
+    --branco: #FFFFFF;
+}
+
+body {
+    background-color: var(--background);
+}
+
+.cabecalho {
+    background-color: var(--branco);
+    height: 120px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    box-shadow: 0 4px 24px;
+    box-shadow: rgba(168, 168, 168, 0.25);
+    border-radius: 35px;
+}
