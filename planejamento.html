@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Planejamento Semanal</title>
+    <link rel="stylesheet" href="styles/reset.css">
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <script type="javascript" src="funcao.js"></script>
+</head>
+
+<body>
+    <header class="cabecalho">
+        <div class="menu-item">
+            <h1>Planejamento Semanal</h1>
+            <p>Utilize o formulário para adicionar novas tarefas:</p>
+        </div>
+        <div class="salvar-excluir">
+            <button>Salvar localStorage</button>
+            <button>Excluir localStorage</button>
+        </div>
+    </header>
+    <main>
+        <section class="adiciona-atividade">
+            <input type="text" placeholder="Atividade" class="btn-atividade" />
+            <select name="dia-semana" id="semana">
+                <option value="">Segunda-feira</option>
+                <option value="">Terça-feira</option>
+                <option value="">Quarta-feira</option>
+                <option value="">Quinta-feira</option>
+                <option value="">Sexta-feira</option>
+                <option value="">Sábado</option>
+                <option value="">Domingo</option>
+                <div class="hora" id="horario">
+                    <input type="time" id="horario" class="hora">
+                </div>
+            </select>
+        </section>
+    </main>
+</body>
+
+</html>
