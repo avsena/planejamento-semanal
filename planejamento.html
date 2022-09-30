@@ -1,9 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 
-<head><!DOCTYPE html>
-<html lang="pt-br">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -11,103 +8,61 @@
     <title>Planejamento Semanal</title>
     <link rel="stylesheet" href="styles/reset.css">
     <link rel="stylesheet" href="styles/style.css">
+    <script src="funcao.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;400;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
-    <script type="javascript" src="funcao.js"></script>
 </head>
 
 <body>
     <header class="cabecalho">
-        <div class="menu-item">
-            <h1>Planejamento Semanal</h1>
-            <p>Utilize o formulário para adicionar novas tarefas:</p>
-        </div>
-        <div class="salvar-excluir">
-            <a href=""><button>Salvar localStorage</button></a>
-            <button>Excluir localStorage</button>
+        <div class="menu">
+            <div class="menu-item">
+                <h1 class="titulo">Planejamento Semanal</h1>
+                <p class="subtitulo">Utilize o formulário para adicionar novas tarefas:</p>
+            </div>
+            <button class="salvar">Salvar localStorage</button>
+            <button class="excluir">Excluir localStorage</button>
+            <div class="salvar-excluir">
+                <article class="relogio"></article>
+                <p class="data" id="data"></p>
+            </div>
         </div>
     </header>
     <main>
         <section class="adiciona-atividade">
-            <input type="text" placeholder="Atividade" class="btn-atividade" />
-            <select name="dia-semana" id="semana">
-                <option value="">Segunda-feira</option>
-                <option value="">Terça-feira</option>
-                <option value="">Quarta-feira</option>
-                <option value="">Quinta-feira</option>
-                <option value="">Sexta-feira</option>
-                <option value="">Sábado</option>
-                <option value="">Domingo</option>
-                <div class="hora" id="horario">
-                    <input type="time" id="horario" class="hora">
+            <input type="text" placeholder="Atividade" class="btn-atividade" id="add-atividade" />
+            <select name="dia" id="semana" class="dia-semana" required>
+                <option value="segunda">Segunda-feira</option>
+                <option value="terca">Terça-feira</option>
+                <option value="quarta">Quarta-feira</option>
+                <option value="quinta">Quinta-feira</option>
+                <option value="sexta">Sexta-feira</option>
+                <option value="sabado">Sábado</option>
+                <option value="domingo">Domingo</option>
+                <div class="horas" id="horario">
+                    <input type="time" id="entrada-hora" class="add-hora" required>
+                    <!-- Seria um input ou um select? Qual a melhor opção?? -->
                 </div>
             </select>
-            <script src="funcao.js"></script>  
-            <div class="botao-atividade">
+            <!--<div class="botao-atividade">  -->
                 <button class="btn-adicionar">+ Adicionar Atividade</button>
                 <button class="btn-excluir">- Excluir Todos</button>
-            </div>
         </section>
         <section>
-            <h6 class="horarios">Horário</h6>
-            <nav>
-                <ul class="horario-semana">
-                    <li>Segunda-feira</li>
-                    <li>Terça-feira</li>
-                    <li>Quarta-feira</li>
-                    <li>Quinta-feira</li>
-                    <li>Sexta-feira</li>
-                    <li>Sábado</li>
-                    <li>Domingo</li>
+            <nav class="seleciona-dia">
+                <ul class="seleciona-dia-semana">
+                    <li class="horario-semana">Horário</li>
+                    <li class="segunda">Segunda-feira</li>
+                    <li class="terca">Terça-feira</li>
+                    <li class="quarta">Quarta-feira</li>
+                    <li class="quinta">Quinta-feira</li>
+                    <li class="sexta">Sexta-feira</li>
+                    <li class="sabado">Sábado</li>
+                    <li class="domingo">Domingo</li>
                 </ul>
             </nav>
-        </section>
-    </main>
-</body>
-
-</html>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Planejamento Semanal</title>
-    <link rel="stylesheet" href="styles/reset.css">
-    <link rel="stylesheet" href="styles/style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
-    <script type="javascript" src="funcao.js"></script>
-</head>
-
-<body>
-    <header class="cabecalho">
-        <div class="menu-item">
-            <h1>Planejamento Semanal</h1>
-            <p>Utilize o formulário para adicionar novas tarefas:</p>
-        </div>
-        <div class="salvar-excluir">
-            <button>Salvar localStorage</button>
-            <button>Excluir localStorage</button>
-        </div>
-    </header>
-    <main>
-        <section class="adiciona-atividade">
-            <input type="text" placeholder="Atividade" class="btn-atividade" />
-            <select name="dia-semana" id="semana">
-                <option value="">Segunda-feira</option>
-                <option value="">Terça-feira</option>
-                <option value="">Quarta-feira</option>
-                <option value="">Quinta-feira</option>
-                <option value="">Sexta-feira</option>
-                <option value="">Sábado</option>
-                <option value="">Domingo</option>
-                <div class="hora" id="horario">
-                    <input type="time" id="horario" class="hora">
-                </div>
-            </select>
-            <script src="funcao.js"></script>  
         </section>
     </main>
 </body>
