@@ -2,36 +2,285 @@
     --segunda-feira: #FFA246;
     --terca-feira: #35E185;
     --quarta-feira: #6688FF;
+    --planejamento: #6688FF;
     --quinta-feira: #B266FF;
     --sexta-feira: #66D1FF;
     --sabado: #FF66D4;
     --domingo: #FF6666;
     --excluir: #DA2B40;
+    --apagar: #98031E;
+    --linha-do-meio: #FF6D6D;
     --verde: #2CBE82;
     --background: #E5E5E5;
     --branco: #FFFFFF;
+    --cor-scroll: #DCDFE3;
+    --cor-relogio-atividade: #3B3E45
 }
 
 body {
     background-color: var(--background);
+    border-radius: 40px;
 }
 
 .cabecalho {
     background-color: var(--branco);
-    height: 120px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    position: relative;
-    box-shadow: 0 4px 24px;
-    box-shadow: rgba(168, 168, 168, 0.25);
+    box-shadow: 0 4px 24px rgba(168, 168, 168, 0.25);
     border-radius: 35px;
+    height: 131px;
+    top: 0;
+}
+
+.menu {
+    align-items: center;
+    justify-content: space-around;
+    display: flex;
+}
+
+
+.menu-item {
+    background: var(--planejamento);
+    border-radius: 0px 14px 15px 0px;
+    padding: 16px 24px, 16px, 24px;
+}
+
+.titulo {
+    color: var(--branco);
+    width: 340px;
+    height: 43px;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 20px;
+    align-items: center;
+    margin-top: 24px;
+    margin-left: 16px;
+}
+
+.subtitulo {
+    color: var(--branco);
+    width: 340px;
+    height: 43px;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+    margin-top: -20px;
+    margin-right: 16px;
+    margin-left: 16px;
+}
+
+.salvar {
+    padding: 10px 12px;
+    gap: 4px;
+    width: 180px;
+    height: 40px;
+    background: var(--verde);
+    border: none;
+    border-radius: 10px;
+    font-size: 17px;
+    font-weight: 400;
+    line-height: 20px;
+    cursor: pointer;
+    color: var(--branco);
+}
+
+
+.excluir {
+    padding: 10px 12px;
+    gap: 4px;
+    width: 180px;
+    height: 40px;
+    background: var(--excluir);
+    border: none;
+    border-radius: 10px;
+    font-size: 17px;
+    font-weight: 400;
+    line-height: 20px;
+    cursor: pointer;
+    color: var(--branco);
+}
+
+.relogio {
+    width: 137px;
+    height: 26px;
+    font-weight: 400;
+    font-size: 40px;
+    line-height: 20px;
+    color: var(--cor-relogio-atividade);
+    font-family: "Poppins";
+    font-style: normal;
+    text-align: center;
+}
+
+.data {
+    width: 241px;
+    height: 20px;
+    font-family: "Poppins";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 20px;
+    color: var(--cor-relogio-atividade);
+    display: flex;
 }
 
 .adiciona-atividade {
+    margin-top: 20px;
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    margin-bottom: 34px;
+}
+
+.btn-atividade {
+    box-sizing: border-box;
+    display: flex;
+    gap: 4px;
+    width: 424px;
+    height: 44px;
+    border: 1px solid var(--verde);
+    border-radius: 10px;
+    font-family: "Nunito";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+    color: var(--cor-relogio-atividade);
+    padding-left: 89px;
+}
+
+.dia-semana {
+    box-sizing: border-box;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 84px 10px 12px;
+    gap: 4px;
+    width: 210px;
+    height: 44px;
+    border: 1px solid var(--verde);
+    border-radius: 10px;
+    font-family: "Nunito";
+    font-style: normal;
+    font-weight: 400px;
+    font-size: 14px;
+    line-height: 20px;
+    color: var(--cor-relogio-atividade);
     display: flex;
 }
 
-.horarios, .horario-semana {
+.add-hora {
+    box-sizing: border-box;
     display: flex;
+    justify-content: center;
+    padding: 10px, 12px;
+    gap: 4px;
+    width: 102px;
+    height: 44px;
+    border: 1px solid var(--verde);
+    border-radius: 10px;
+}
+
+.btn-adicionar {
+    color: var(--branco);
+    font-family: "Nunito";
+    font-weight: 400;
+    font-size: 17px;
+    line-height: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px, 12px;
+    gap: 4px;
+    width: 222px;
+    height: 44px;
+    background-color: var(--verde);
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.btn-excluir {
+    justify-content: center;
+    align-items: center;
+    padding: 10px 12px;
+    gap: 4px;
+    width: 184px;
+    height: 44px;
+    border-radius: 10px;
+    background-color: var(--excluir);
+    font-family: "Nunito";
+    font-style: normal;
+    font-size: 17px;
+    font-weight: 400;
+    line-height: 20px;
+    color: var(--branco);
+    border: none;
+    display: flex;
+    cursor: pointer;
+}
+
+.seleciona-dia-semana {
+    display: flex;
+}
+
+.horario-semana {
+    width: 85px;
+    height: 75px;
+    background-color: var(--branco);
+    box-shadow: 0px 4px 24px rgba(168, 168, 168, 0.25);
+    border-radius: 10px;
+    font-family: "Poppins";
+    font-style: normal;
+    font-size: 17px;
+    font-weight: 400;
+    line-height: 20px;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    display: flex;
+    color: var(--cor-relogio-atividade);
+}
+
+.segunda, .terca, .quarta, .quinta, .sexta, .sabado, .domingo {
+    width: 200px;
+    height: 33px;
+    color: var(--branco);
+    border-radius: 9px 9px 0 0;
+    text-align: center;
+    justify-content: center;
+    line-height: 2;
+    justify-content: space-between;
+    margin-left: 40px;
+    cursor: pointer;
+}
+
+.segunda {
+    background-color: var(--segunda-feira);
+}
+
+.terca {
+    background-color: var(--terca-feira);
+}
+
+.quarta {
+    background-color: var(--quarta-feira);
+}
+
+.quinta {
+    background-color: var(--quinta-feira);
+}
+
+.sexta {
+    background-color: var(--sexta-feira);
+}
+
+.sabado {
+    background-color: var(--sabado);
+}
+
+.domingo {
+    background-color: var(--domingo);
 }
