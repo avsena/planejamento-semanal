@@ -1,20 +1,64 @@
-{
-    //alert("Olá");
+//Atualiza a página automaticamente:
+setInterval(() => {
 
-    //função-data (DIA/MÊS/ANO)
+    //Define horário "hora e minutos":
     var horaData = new Date();
-    var dia = horaData.getDate();
+ /* var dia = horaData.getDate();
     var mes = horaData.getMonth();
-    var ano = horaData.getFullYear();
+    var ano = horaData.getFullYear(); */
 
-    meses = new Array("Janeiro", "Fevereiro", "Março", "Abril", "Maio", "Junho", "Julho", "Agosto", "Setembro", "Outubro", "Novembro", "Dezembro");
+    function fix(digito) {
+       if (digito < 10) {
+          digito = "0" + digito
+       }
+       return digito;
+    }
 
-    //função-hora (HH:MM)
-    var horas = horaData.getHours();
-    var minutos = horaData.getMinutes();
+    document.querySelector('.relogio').innerHTML =
+    (fix(horaData.getHours()) + ':' + fix(horaData.getMinutes()));
 
-    document.write(horas + ":" + minutos + "<br/>");//preciso aprender a conectar no id do HTML
+ //Define a data "dia, mes e ano":
+    meses = new Array('Janeiro', 'Fevereiro', 'Março', 'Abril', 'Maio', 'Junho', 'Julho', 'Agosto', 'Setembro', 'Outubro', 'Novembro', 'Dezembro');
+    document.querySelector('.data').innerHTML = (fix(horaData.getDate()) + ' de ' + meses[horaData.getMonth()] + ' de ' + horaData.getFullYear());
+ }, 1000);//segundos definidos para atualizar a página
 
-    document.getElementById("data").innerHTML =//estou querendo conectar a data na class do html. A data some*/
-    (document.write(dia + " de " + meses[mes] + " de " + ano));
+ //função limpar input:
+function clear() {
+   addAtividade.value = "";
+   addHora.value = "";
 }
+
+ // salvar localStorage:
+ const planejamento = [] = JSON.parse(localStorage.getItem("planejar")) || [];
+
+ var salvar = document.querySelector(".salvar");
+ salvar.addEventListener("click", () => {
+    localStorage();
+ });
+
+ //botão exclui localStorage:
+var excluir = document.querySelector(".excluir");
+excluir.addEventListener("click", () => {
+    localStorage.removeItem();
+});
+
+//manipular o localStorage:
+function saveLocalStorage() {
+   localStorage.setItem()
+}
+
+
+
+//seção para adicionar atividade "input de atividade, dia e hora":
+var addAtividade = document.querySelector(".adicionar-atividade");
+var addDia = document.querySelector("dia-semana")
+var addHora = document.querySelector('.add-hora')
+
+addAtividade.addEventListener("submit", (e) => {
+    e.preventDefault();
+    var addAtividades = addAtividade.value;
+    var addDias = addDia.value;
+    var addHoras = addHora.value;
+    clear();
+    save(addAtividades, addDias, addHoras);
+});
