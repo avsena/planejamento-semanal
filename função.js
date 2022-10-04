@@ -141,9 +141,7 @@ setInterval(() => {
     }
  }
  
- // EVENTS
- 
- adicionarAtividade.addEventListener('submit', (e) => { // EVENT SUBMIT FORM
+ adicionarAtividade.addEventListener('submit', (e) => {
  
     e.preventDefault();
  
@@ -155,7 +153,7 @@ setInterval(() => {
    
  })
  
- buttonRemoveAll.addEventListener('click', () => { //EVENT REMOVE ALL CARDS SELECTED FOR DAY
+ buttonRemoveAll.addEventListener('click', () => { 
     if(selectedDay) {
        schedule.splice(schedule.findIndex(e => 
           e.toDoday === selectedDay));
@@ -166,9 +164,8 @@ setInterval(() => {
     }
  })
  
- // BUTTONS LOCALSTORAGE
- 
- buttonSaveLocalStorage.addEventListener('click', () => { // SAVE IN LOCALSTORAGE
+ //salvar no localstorage 
+ buttonSaveLocalStorage.addEventListener('click', () => {
     saveLocalStorage();
  })
  
