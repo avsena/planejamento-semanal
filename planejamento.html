@@ -6,8 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Planejamento Semanal</title>
-    <link rel="stylesheet" href="styles/reset.css">
-    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;400;700&display=swap" rel="stylesheet">
@@ -18,13 +18,14 @@
     <header class="cabecalho">
         <div class="menu">
             <div class="menu-item">
-                <h2>Alfredo</h2>
-                <h1 class="titulo">Planejamento Semanal</h1>
+                <h1 class="titulo">Planejamento Semanal Alfredo</h1>
                 <p class="subtitulo">Utilize o formulário para adicionar novas tarefas:</p>
             </div>
-            <button class="salvar">Salvar localStorage</button>
-            <button class="excluir">Excluir localStorage</button>
             <div class="salvar-excluir">
+            <button class="salvar-storage">Salvar localStorage</button>
+            <button class="excluir-storage">Excluir localStorage</button>
+            </div>
+            <div class="hora-data">
                 <p class="relogio" id="relogio"></p>
                 <p class="data" id="data"></p>
             </div>
@@ -32,9 +33,9 @@
     </header>
     <main>
         <section class="adiciona-atividade">
-            <div class="adicionar-atividade">
-                <input type="text" placeholder="Atividade" class="btn-atividade" id="add-atividade" />
-                <select name="dia" id="semana" class="dia-semana" required>
+            <div id="adicionar-atividade">
+                <input type="text" placeholder="Atividade" class="btn-atividade" id="add-atividade" required/>
+                <select class="dia-semana">
                     <option value="segunda">Segunda-feira</option>
                     <option value="terca">Terça-feira</option>
                     <option value="quarta">Quarta-feira</option>
@@ -42,36 +43,46 @@
                     <option value="sexta">Sexta-feira</option>
                     <option value="sabado">Sábado</option>
                     <option value="domingo">Domingo</option>
-                    <div class="horas" id="horario">
-                        <input type="time" id="entrada-hora" class="add-hora" required>
-                        <!-- Seria um input ou um select? Qual a melhor opção?? Como modificar o estilo do type time?-->
-                    </div>
                 </select>
+                <input type="time" id="entrada-hora" class="add-hora" required>
                 <button class="btn-adicionar" id="submit" type="submit">+ Adicionar Atividade</button>
+                <!-- Seria um input ou um select? Qual a melhor opção?? Como modificar o estilo do type time?-->
+                    
                 <button class="btn-excluir">- Excluir Todos</button>
             </div>
         </section>
         <section>
-            <nav class="seleciona-dia">
-                <ul class="seleciona-dia-semana">
-                    <li class="horario-semana">Horário</li>
-                    <li class="segunda">Segunda-feira</li>
-                    <li class="terca">Terça-feira</li>
-                    <li class="quarta">Quarta-feira</li>
-                    <li class="quinta">Quinta-feira</li>
-                    <li class="sexta">Sexta-feira</li>
-                    <li class="sabado">Sábado</li>
-                    <li class="domingo">Domingo</li>
+            <nav class="seleciona">
+                <ul class="sel-dia-semana">
+                    <li class="sel-dia-semana-item horario-semana">Horário</li>
+                    <li class="sel-dia-semana-item segunda active" id="segunda">Segunda-feira</li>
+                    <li class="sel-dia-semana-item terca" id="terca">Terça-feira</li>
+                    <li class="sel-dia-semana-item quarta" id="quarta">Quarta-feira</li>
+                    <li class="sel-dia-semana-item quinta" id="quinta">Quinta-feira</li>
+                    <li class="sel-dia-semana-item sexta" id="sexta">Sexta-feira</li>
+                    <li class="sel-dia-semana-item sabado" id="sabado">Sábado</li>
+                    <li class="sel-dia-semana-item domingo" id="domingo">Domingo</li>
                 </ul>
             </nav>
         </section>
-        <section class="card-atividades">
-            <ul class="card-atividades-listas">
+        <section class="card-atividades card">
+            <div class="info" id="card">
                 <!-- Aqui entra a função do JavaScript -->
-            </ul>
+                <div id="cardsMo" class="none"></div>
+        <li id="cards__planner-list"></li>
+        <div id="cards__planner-hour"></div>
+        <h2 id="cardsTh" class="none"></h2>
+        <div id="cards__planner-task"></div>
+        <p id="cards__planner-text" class="cards__planner-text"></p>
+        <button id="cards__planner-task-button" class="cards__planner-task-button"></button>
+      </div>
+            </div>
+        </section>
+        <section>
+            <img src="LogoCompasso.svg" alt="Imagem de Logo da Compass" class="imagem">
         </section>
     </main>
-    <script src="funcao.js"></script>
+    <script src="javascript.js"></script>
 </body>
 
 </html>
