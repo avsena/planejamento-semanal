@@ -24,7 +24,7 @@ body {
     font-weight: 400;
     font-size: 17px;
     background-color: #E5E5E5;
-    background-image: url('../../img/bola-LogoCompasso\ 1.svg');
+    background-image: url('../img/bola-LogoCompass.svg');
     background-repeat: no-repeat;
     background-position: bottom right;
     height: 100vh;
@@ -278,95 +278,39 @@ body {
     border-radius: 15px 0px 0px 15px;
 }
 
-.segunda {
+.segundafeira {
     background-color: var(--segunda-feira);
     cursor: pointer;
 }
 
-.terca {
+.tercafeira {
     background-color: var(--terca-feira);
     cursor: pointer;
 }
 
-.quarta {
+.quartafeira {
     background-color: var(--quarta-feira);
     cursor: pointer;
 }
 
-.quinta {
+.quintafeira {
     background-color: var(--quinta-feira);
     cursor: pointer;
 }
 
-.sexta {
+.sextafeira {
     background-color: var(--sexta-feira);
     cursor: pointer;
 }
 
-.sabado {
+.sabadofim {
     background-color: var(--sabado);
     cursor: pointer;
 }
 
-.domingo {
+.domingofim {
     background-color: var(--domingo);
     cursor: pointer;
-}
-
-.segundaBefore::before {
-    content: "";
-    width: 14px;
-    height: 85px;
-    background-color: var(--monday-bg);
-    border-radius: 15px 0px 0px 15px;
-}
-
-.tercaBefore::before {
-    content: "";
-    width: 14px;
-    height: 85px;
-    background-color: var(--tuesday-bg);
-    border-radius: 15px 0px 0px 15px;
-}
-
-.quartaBefore::before {
-    content: "";
-    width: 14px;
-    height: 85px;
-    background-color: var(--blue-main);
-    border-radius: 15px 0px 0px 15px;
-}
-
-.quintaBefore::before {
-    content: "";
-    width: 14px;
-    height: 85px;
-    background-color: var(--thursday-bg);
-    border-radius: 15px 0px 0px 15px;
-}
-
-.sextaBefore::before {
-    content: "";
-    width: 14px;
-    height: 85px;
-    background-color: var(--friday-bg);
-    border-radius: 15px 0px 0px 15px;
-}
-
-.sabadoBefore::before {
-    content: "";
-    width: 14px;
-    height: 85px;
-    background-color: var(--saturday-bg);
-    border-radius: 15px 0px 0px 15px;
-}
-
-.domingoBefore::before {
-    content: "";
-    width: 14px;
-    height: 85px;
-    background-color: var(--sunday-bg);
-    border-radius: 15px 0px 0px 15px;
 }
 
 .imagem {
