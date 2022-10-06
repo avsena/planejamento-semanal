@@ -18,12 +18,12 @@
     <header class="cabecalho">
         <div class="menu">
             <div class="menu-item">
-                <h1 class="titulo">Planejamento Semanal Alfredo</h1>
+                <h1 class="titulo">Planejamento Semanal</h1>
                 <p class="subtitulo">Utilize o formulário para adicionar novas tarefas:</p>
             </div>
             <div class="salvar-excluir">
-            <button class="salvar-storage">Salvar localStorage</button>
-            <button class="excluir-storage">Excluir localStorage</button>
+                <button class="salvar-storage">Salvar localStorage</button>
+                <button class="excluir-storage">Excluir localStorage</button>
             </div>
             <div class="hora-data">
                 <p class="relogio" id="relogio"></p>
@@ -34,7 +34,7 @@
     <main>
         <section class="adiciona-atividade">
             <div id="adicionar-atividade">
-                <input type="text" placeholder="Atividade" class="btn-atividade" id="add-atividade" required/>
+                <input type="text" placeholder="Atividade" class="btn-atividade" id="add-atividade" required />
                 <select class="dia-semana">
                     <option value="segunda">Segunda-feira</option>
                     <option value="terca">Terça-feira</option>
@@ -47,7 +47,7 @@
                 <input type="time" id="entrada-hora" class="add-hora" required>
                 <button class="btn-adicionar" id="submit" type="submit">+ Adicionar Atividade</button>
                 <!-- Seria um input ou um select? Qual a melhor opção?? Como modificar o estilo do type time?-->
-                    
+
                 <button class="btn-excluir">- Excluir Todos</button>
             </div>
         </section>
@@ -55,34 +55,46 @@
             <nav class="seleciona">
                 <ul class="sel-dia-semana">
                     <li class="sel-dia-semana-item horario-semana">Horário</li>
-                    <li class="sel-dia-semana-item segunda active" id="segunda">Segunda-feira</li>
-                    <li class="sel-dia-semana-item terca" id="terca">Terça-feira</li>
-                    <li class="sel-dia-semana-item quarta" id="quarta">Quarta-feira</li>
-                    <li class="sel-dia-semana-item quinta" id="quinta">Quinta-feira</li>
-                    <li class="sel-dia-semana-item sexta" id="sexta">Sexta-feira</li>
-                    <li class="sel-dia-semana-item sabado" id="sabado">Sábado</li>
-                    <li class="sel-dia-semana-item domingo" id="domingo">Domingo</li>
+                    <li class="sel-dia-semana-item segundafeira active" id="segunda">Segunda-feira</li>
+                    <li class="sel-dia-semana-item tercafeira" id="terca">Terça-feira</li>
+                    <li class="sel-dia-semana-item quartafeira" id="quarta">Quarta-feira</li>
+                    <li class="sel-dia-semana-item quintafeira" id="quinta">Quinta-feira</li>
+                    <li class="sel-dia-semana-item sextafeira" id="sexta">Sexta-feira</li>
+                    <li class="sel-dia-semana-item sabadofim" id="sabado">Sábado</li>
+                    <li class="sel-dia-semana-item domingofim" id="domingo">Domingo</li>
                 </ul>
             </nav>
         </section>
         <section class="card-atividades card">
             <div class="info" id="card">
                 <!-- Aqui entra a função do JavaScript -->
-                <div id="cardsMo" class="none"></div>
-        <li id="cards__planner-list"></li>
-        <div id="cards__planner-hour"></div>
-        <h2 id="cardsTh" class="none"></h2>
-        <div id="cards__planner-task"></div>
-        <p id="cards__planner-text" class="cards__planner-text"></p>
-        <button id="cards__planner-task-button" class="cards__planner-task-button"></button>
-      </div>
+                <div id="cards" class="cards">
+                    <!-- <div id="card" class="card">
+                      <aside>
+                        <div class="horario">
+                          <p class="act-time" id="act-time">1111</p>
+                        </div>
+                      </aside>
+                      <div class="caixaTexto"></div>
+                      <div id="conteudo" class="conteudo">
+                        <input type="text" class="text" value="activity" readonly />
+                      </div>
+                      <div class="btn-remove">
+                        <button class="btn-default red remove">Apagar</button>
+                      </div>
+                    </div> -->
+                    <div id="cardsMo" class="none"></div>
+                    <div id="cardsTu" class="none"></div>
+                    <div id="cardsWe" class="none"></div>
+                    <div id="cardsTh" class="none"></div>
+                    <div id="cardsFr" class="none"></div>
+                    <div id="cardsSa" class="none"></div>
+                    <div id="cardsSu" class="none"></div>
+                </div>
             </div>
         </section>
-        <section>
-            <img src="img/bola-LogoCompass.svg" alt="Imagem de Logo da Compass" class="imagem">
-        </section>
     </main>
-    <script src="funcao.js"></script>
+    <script src="javascript.js"></script>
 </body>
 
 </html>
